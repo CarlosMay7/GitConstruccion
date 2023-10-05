@@ -26,6 +26,8 @@ public class Main {
                 printResult(result);
                 break;
             case 2:
+                result = substraction(firstNumber, secondNumber);
+                printResult(result);
                 break;
             case 3:
                 break;
@@ -46,9 +48,12 @@ public class Main {
         }
 
     }
+    public static double substraction(double firstNumber, double secondNumber) {
+        double result = firstNumber - secondNumber;
+        return result;
+    }
 
     public static void printResult(double result){
         System.out.println("El resultado es: " + result);
     }
-    
 }
