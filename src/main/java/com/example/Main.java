@@ -28,7 +28,7 @@ public class Main {
             case 2:
                 break;
             case 3:
-                result = multiplicarNumeros((double) firstNumber, (double)secondNumber);
+                result = multiplicarNumeros(firstNumber, secondNumber);
                 printResult(result);
                 break;
             case 4:
