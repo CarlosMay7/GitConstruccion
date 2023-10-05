@@ -31,7 +31,8 @@ public class Main {
                 break;
             case 4:
                 if (secondNumber != 0) {
-                    
+                    result = division(firstNumber, secondNumber);
+                    printResult(result);
                 } else {
                     System.out.println("Error: No se puede dividir por cero.");
                 }
@@ -45,6 +46,11 @@ public class Main {
                 break;
         }
 
+    }
+
+    public static double division(double firstNumber, double secondNumber ){
+        double result = firstNumber / secondNumber;
+        return result;
     }
 
     public static void printResult(double result){
