@@ -28,6 +28,8 @@ public class Main {
             case 2:
                 break;
             case 3:
+                result = multiplicarNumeros((double) firstNumber, (double)secondNumber);
+                printResult(result);
                 break;
             case 4:
                 if (secondNumber != 0) {
@@ -49,6 +51,10 @@ public class Main {
 
     public static void printResult(double result){
         System.out.println("El resultado es: " + result);
+    }
+
+    public static double multiplicarNumeros(double numeroUno, double numeroDos){
+        return numeroUno * numeroDos;
     }
     
 }
