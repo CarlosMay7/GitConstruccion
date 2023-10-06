@@ -39,6 +39,12 @@ public class Main {
             case 5:
                 break;
             case 6:
+                double base = (double) firstNumber;
+                int exponent = (int) secondNumber;
+
+                double powerResult = power(base, exponent);
+
+                printResult(powerResult);
                 break;
             default:
                 System.out.println("Operación no válida.");
@@ -47,8 +53,19 @@ public class Main {
 
     }
 
+    public static double power(double base, int exponent) {
+        if (exponent < 0) {
+            throw new IllegalArgumentException("El exponente debe ser un número no negativo");
+        }
+        
+        if (exponent == 0) {
+            return 1.0;
+        }
+        
+        return base * power(base, exponent - 1);
+    }
+    
     public static void printResult(double result){
         System.out.println("El resultado es: " + result);
     }
-    
 }
