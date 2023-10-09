@@ -75,6 +75,8 @@ public class Calculator {
                 break;
             case 5:
                 // Power implmenetation
+                this.m_result = power();
+                printResult();
                 break;
             case 6:
                 // Module implmenetation
@@ -85,6 +87,26 @@ public class Calculator {
         }
     }
 
+    private double power() {
+        double base = m_firstOperand;
+        int exponent = (int) m_secondOperand;
+    
+        if (exponent == 0) {
+            return 1;
+        } else if (exponent < 0) {
+            base = 1 / base;
+            exponent = -exponent;
+        }
+    
+        double result = 1;
+
+        for (int i = 0; i < exponent; i++) {
+            result *= base;
+        }
+    
+        return result;
+    }
+    
     private void printResult() {
         System.out.println("The result is: " + this.m_result);
     }
