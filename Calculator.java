@@ -68,7 +68,12 @@ public class Calculator {
                 //Substraction implementation
                 break;
             case 3:
-                // Divide implmenetation
+                if(this.m_secondOperand != 0){
+                    this.m_result = divide();
+                    printResult();
+                }else{
+                    System.out.println("Error: No es posible realizar una división cuando el divisor es cero.");
+                }
                 break;
             case 4:
                 // Multiplication implmenetation
@@ -83,6 +88,10 @@ public class Calculator {
                 System.out.println("Invalid operation.");
                 break;
         }
+    }
+
+    private double divide(){
+        return this.m_firstOperand / this.m_secondOperand;
     }
 
     private void printResult() {
