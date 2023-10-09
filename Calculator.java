@@ -7,10 +7,10 @@ public class Calculator {
     private double m_result;
     private int m_operation;
 
-    public Calculator(){
+    public Calculator() {
         this.m_scanner = new Scanner(System.in);
         this.m_firstOperand = 0.0;
-        this.m_secondOperand= 0.0;
+        this.m_secondOperand = 0.0;
         this.m_result = 0.0;
         this.m_operation = 0;
     }
@@ -26,7 +26,7 @@ public class Calculator {
         this.m_firstOperand = askForOperand();
 
         System.out.println("Enter your second operand");
-        this.m_secondOperand= askForOperand();
+        this.m_secondOperand = askForOperand();
     }
 
     private void askForOperation() {
@@ -56,16 +56,17 @@ public class Calculator {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a valid value.");
             }
-        }    
+        }
     }
 
     private void performOperation() {
         switch (this.m_operation) {
             case 1:
-                // Sum implementation
+                this.m_result = sum();
+                printResult();
                 break;
             case 2:
-                //Substraction implementation
+                // Substraction implementation
                 break;
             case 3:
                 // Divide implmenetation
@@ -84,6 +85,11 @@ public class Calculator {
                 break;
         }
     }
+
+    private double sum(){
+        return this.m_firstOperand + this.m_secondOperand;
+    }
+
 
     private void printResult() {
         System.out.println("The result is: " + this.m_result);
