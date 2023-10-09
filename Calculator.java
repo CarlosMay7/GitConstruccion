@@ -71,7 +71,8 @@ public class Calculator {
                 // Divide implmenetation
                 break;
             case 4:
-                // Multiplication implmenetation
+                this.m_result = multiply();
+                printResult();
                 break;
             case 5:
                 // Power implmenetation
@@ -83,6 +84,10 @@ public class Calculator {
                 System.out.println("Invalid operation.");
                 break;
         }
+    }
+
+    private double multiply(){
+        return this.m_firstOperand * this.m_secondOperand;
     }
 
     private void printResult() {
